@@ -13,6 +13,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import apiService from "./services/apiService";
 import Navbar from "./components/Dashboard/NavBar";
 import VottingSession from "./components/VottingSession";
+import OrganizationPage from "./components/OrganizatonPage";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -65,7 +66,7 @@ const App = () => {
 
                 <Routes>
                   <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/organizations" element={<OrganizationList />} />
+                  <Route path="/organizations" element={<OrganizationPage />} />
                   <Route path="/voting-sessions" element={<VottingSession />} />
                   <Route path="/positions/:sessionId" element={<PositionManagement />} />
                   <Route path="/voters/:sessionId" element={<VoterList />} />

@@ -1,16 +1,16 @@
 // src/components/Sidebar.js
 import React from "react";
-import { FiHome, FiDatabase, FiUsers, FiFileText, FiSettings, FiMenu } from "react-icons/fi";
+import { FiHome, FiDatabase, FiUsers, FiFileText, FiSettings, FiMenu, FiLogOut } from "react-icons/fi";
 import NavItem from "./NavItem"; // We’ll create this next
 
 const Sidebar = ({ isOpen, toggleSidebar }) => (
   <aside
-    className={`bg-white h-screen shadow-md transition-all duration-300 ${
+    className={`bg-gray-800 h-screen shadow-md transition-all duration-300 ${
       isOpen ? "w-64" : "w-20"
     }`}
   >
     <button
-      className="text-gray-500 p-4 focus:outline-none"
+      className="text-white p-4 focus:outline-none"
       onClick={toggleSidebar}
     >
       <FiMenu size={24} />
@@ -23,6 +23,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => (
       <NavItem to="/users" icon={<FiUsers />} text="Users" isOpen={isOpen} />
       <NavItem to="/reports" icon={<FiFileText />} text="Reports" isOpen={isOpen} />
       <NavItem to="/settings" icon={<FiSettings />} text="Settings" isOpen={isOpen} />
+      <NavItem to="/logout" icon={<FiLogOut />} text="Logout" isOpen={isOpen} />
     </nav>
   </aside>
 );
